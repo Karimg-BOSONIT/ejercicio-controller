@@ -65,14 +65,7 @@ public class controller {
         }
         return querysList;
     }
-    private boolean hasJumpHeader(List<Header> headersList) {
-        for (Header header : headersList) {
-            if ("SALTA".equals(header.getValue())) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 
 }
 

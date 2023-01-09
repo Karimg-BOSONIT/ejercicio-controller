@@ -10,7 +10,9 @@ public class MyFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
+        //conseguimos la request
         HttpServletRequest httpRequest = (HttpServletRequest) request;
+        //conseguimos el header de la request
         String redirectHeader = httpRequest.getHeader("redirige");
         if ("SALTA".equals(redirectHeader)) {
             entryJump();
